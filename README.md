@@ -11,14 +11,21 @@ and load balancers.
 
 ```
 cd $PROJECT_ROOT
-git clone https://github.com/sax/app_bundle.git bundle
+mkdir bundle
+cd bundle
+git init
+git remote add bundle https://github.com/sax/app_bundle.git
+git fetch bundle
+git reset --hard bundle/master
+
+git remote add origin git@github.com:[organization/project-name]
+git push -u origin master
 ```
 
 ## Usage
 
 ```bash
-brew bundle
-bundle exec rake reset
+bin/setup
 foreman start
 ```
 

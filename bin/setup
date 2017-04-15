@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+header() {
+  printf "\e[30;100m %-80s\e[0m\n" "$@"
+}
+
+info() {
+  printf "\e[32m%s\e[0m\n" "$@"
+}
+
+header 'Setting up environment'
+cp -v .envrc.sample .envrc
+echo
+
+header 'Installing brew dependencies'
+brew bundle
+echo
+
+header 'Installing gem dependencies'
+bundle install
+echo
+
+header 'Running rake reset'
+bundle exec rake reset
+echo
+
+info 'Run dependencies with "foreman start"'
+echo
