@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
+## example chruby setup
 source '/usr/local/share/chruby/chruby.sh'
-chruby '2.4'
+chruby "$(cat .ruby-version)"
+
+## example rvm setup
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm
+# rvm use . > /dev/null
