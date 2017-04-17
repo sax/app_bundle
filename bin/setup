@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 header() {
   printf "\e[30;100m %-80s\e[0m\n" "$@"
 }
