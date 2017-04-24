@@ -11,8 +11,10 @@ info() {
 }
 
 header 'Setting up environment'
+set +e
 cp -nv .ruby-version.sample .ruby-version
 cp -nv .envrc.sample .envrc
+set -e
 info 'Please edit .envrc to reflect your ruby setup'
 printf 'hit enter ready'
 read
