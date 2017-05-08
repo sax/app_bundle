@@ -7,21 +7,6 @@ For workstations with multiple installed projects, perhaps in different workspac
 this bundle will help to isolate dependencies such as databases, cache servers,
 and load balancers.
 
-## Installation
-
-```
-cd $PROJECT_ROOT
-mkdir bundle
-cd bundle
-git init
-git remote add bundle https://github.com/sax/app_bundle.git
-git fetch bundle
-git reset --hard bundle/master
-
-git remote add origin git@github.com:[organization/project-name]
-git push -u origin master
-```
-
 ## Usage
 
 ```bash
